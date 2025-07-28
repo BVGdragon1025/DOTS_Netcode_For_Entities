@@ -13,7 +13,7 @@ partial struct GoInGameServerSystem : ISystem
         state.RequireForUpdate<NetworkId>();
     }
 
-    //[BurstCompile]
+    [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer entityCommandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
@@ -28,8 +28,6 @@ partial struct GoInGameServerSystem : ISystem
                 .WithEntityAccess())
         {
             entityCommandBuffer.AddComponent<NetworkStreamInGame>(receiveRpcCommandRequest.ValueRO.SourceConnection);
-            UnityEngine.Debug.Log("Client connected to server!");
-
 
             Entity playerEntity = entityCommandBuffer.Instantiate(entitiesReferences.playerPrefabEntity);
             entityCommandBuffer.SetComponent(playerEntity, LocalTransform.FromPosition(new float3(

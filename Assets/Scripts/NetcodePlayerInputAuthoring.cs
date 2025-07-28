@@ -11,10 +11,7 @@ public class NetcodePlayerInputAuthoring : MonoBehaviour
         public override void Bake(NetcodePlayerInputAuthoring authoring)
         {
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent(entity, new NetcodePlayerInput
-            {
-
-            });
+            AddComponent(entity, new NetcodePlayerInput());
         }
     }
 

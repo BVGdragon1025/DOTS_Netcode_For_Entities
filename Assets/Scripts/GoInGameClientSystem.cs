@@ -6,7 +6,7 @@ using Unity.NetCode;
 partial struct GoInGameClientSystem : ISystem
 {
 
-    //[BurstCompile]
+    [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer entityCommandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
@@ -19,7 +19,6 @@ partial struct GoInGameClientSystem : ISystem
                 .WithEntityAccess())
         {
             entityCommandBuffer.AddComponent<NetworkStreamInGame>(entity);
-            UnityEngine.Debug.Log("Setting Client as InGame");
 
             Entity rpcEntity = entityCommandBuffer.CreateEntity();
             entityCommandBuffer.AddComponent(rpcEntity, new GoInGameRequestRpc());

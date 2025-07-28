@@ -7,12 +7,6 @@ using UnityEngine;
 partial struct TestNetcodeEntitiesServerSystem : ISystem
 {
     [BurstCompile]
-    public void OnCreate(ref SystemState state)
-    {
-        
-    }
-
-    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer entityCommandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
@@ -25,7 +19,6 @@ partial struct TestNetcodeEntitiesServerSystem : ISystem
                 RefRO<ReceiveRpcCommandRequest>>().WithEntityAccess())
         {
             
-            Debug.Log("Received Rpc: " + sampleRPC.ValueRO.value + " :: " + receiveRpcCommandRequest.ValueRO.SourceConnection);
             entityCommandBuffer.DestroyEntity(entity);
 
         }

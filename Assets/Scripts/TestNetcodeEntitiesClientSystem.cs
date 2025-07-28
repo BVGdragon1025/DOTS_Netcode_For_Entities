@@ -7,12 +7,6 @@ using UnityEngine;
 partial struct TestNetcodeEntitiesClientSystem : ISystem
 {
     [BurstCompile]
-    public void OnCreate(ref SystemState state)
-    {
-        
-    }
-
-    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         if (Input.GetKeyDown(KeyCode.T))
@@ -25,7 +19,6 @@ partial struct TestNetcodeEntitiesClientSystem : ISystem
             });
 
             state.EntityManager.AddComponentData(rpcEntity, new SendRpcCommandRequest());
-            Debug.Log("Sending our Rpc...");
         }
     }
 

@@ -47,10 +47,9 @@ partial struct NetcodePlayerInputSystem : ISystem
 
             netcodePlayerInput.ValueRW.inputVector = inputVector;
 
-            if (Input.GetKeyDown(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 netcodePlayerInput.ValueRW.isShooting.Set();
-                Debug.Log("Is Shooting!");
             }
             else
             {
@@ -60,9 +59,4 @@ partial struct NetcodePlayerInputSystem : ISystem
         }
     }
 
-    [BurstCompile]
-    public void OnDestroy(ref SystemState state)
-    {
-        
-    }
 }

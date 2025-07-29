@@ -13,7 +13,7 @@ partial struct GoInGameServerSystem : ISystem
         state.RequireForUpdate<NetworkId>();
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer entityCommandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
@@ -29,22 +29,14 @@ partial struct GoInGameServerSystem : ISystem
         {
             entityCommandBuffer.AddComponent<NetworkStreamInGame>(receiveRpcCommandRequest.ValueRO.SourceConnection);
 
-            Entity playerEntity = entityCommandBuffer.Instantiate(entitiesReferences.playerPrefabEntity);
+            Entity playerEntity = entityCommandBuffer.Instantiate(entitiesReferences.playerOneEntity);
             entityCommandBuffer.SetComponent(playerEntity, LocalTransform.FromPosition(new float3(
-                UnityEngine.Random.Range(-10, +10), 0, 0
-            )));
+                UnityEngine.Random.Range(-10, +10), 0, 0)));
 
             NetworkId networkId = SystemAPI.GetComponent<NetworkId>(receiveRpcCommandRequest.ValueRO.SourceConnection);
             
-            entityCommandBuffer.AddComponent(playerEntity, new GhostOwner
-            {
-                NetworkId = networkId.Value,
-
-            });
-            entityCommandBuffer.AppendToBuffer(receiveRpcCommandRequest.ValueRO.SourceConnection, new LinkedEntityGroup
-            {
-                Value = playerEntity,
-            });
+            entityCommandBuffer.AddComponent(playerEntity, new GhostOwner { NetworkId = networkId.Value });
+            entityCommandBuffer.AppendToBuffer(receiveRpcCommandRequest.ValueRO.SourceConnection, new LinkedEntityGroup{ Value = playerEntity });
 
             entityCommandBuffer.DestroyEntity(entity);
         }

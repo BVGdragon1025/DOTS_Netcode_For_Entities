@@ -27,7 +27,7 @@ partial struct ShootSystem : ISystem
             {
                 if (netcodePlayerInput.ValueRO.isShooting.IsSet)
                 {
-                    Entity bulletEntity = entityCommandBuffer.Instantiate(entitiesReferences.bulletPrefabEntity);
+                    Entity bulletEntity = entityCommandBuffer.Instantiate(entitiesReferences.bulletEntity);
                     entityCommandBuffer.SetComponent(bulletEntity, LocalTransform.FromPosition(localTransform.ValueRO.Position));
                     entityCommandBuffer.SetComponent(bulletEntity, new GhostOwner
                     {

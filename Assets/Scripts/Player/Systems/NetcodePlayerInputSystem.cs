@@ -15,14 +15,11 @@ partial struct NetcodePlayerInputSystem : ISystem
         
     }
 
-    [BurstCompile]
+    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        foreach ((
-            RefRW<NetcodePlayerInput> netcodePlayerInput,
-            RefRW<MyValue> myValue)
-            in SystemAPI.Query<RefRW<NetcodePlayerInput>,
-            RefRW<MyValue>>().WithAll<GhostOwnerIsLocal>())
+        foreach (
+            RefRW<NetcodePlayerInput> netcodePlayerInput in SystemAPI.Query<RefRW<NetcodePlayerInput>>().WithAll<GhostOwnerIsLocal>())
         {
             float2 inputVector = new float2();
             if (Input.GetKey(KeyCode.W))

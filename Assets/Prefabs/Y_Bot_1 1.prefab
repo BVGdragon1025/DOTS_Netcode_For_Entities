@@ -50,16 +50,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
       propertyPath: m_Name
-      value: Y_Bot_2
+      value: Y_Bot_1 1
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 5822821947120931875, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 3b4098331f5286a47b5329969a736781, type: 2}
     - target: {fileID: 5866666021909216657, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -70,88 +66,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1aa4d9d146dfbee4b932165785e76bb8, type: 2}
     - target: {fileID: 5866666021909216657, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -1746724135668878323}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -7001314046378684613}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -2747878819363383279}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -5769028731505164745}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
---- !u!1 &4676952503688226339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d128fbd1debffd94d8a8cecdbce39aab, type: 3}
-  m_PrefabInstance: {fileID: 5487273668456799090}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-1746724135668878323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676952503688226339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b8277f8d448d8c498514bd61d45dcba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-7001314046378684613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676952503688226339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a49f29fa95c61438b259dc69bb80ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 5
---- !u!114 &-2747878819363383279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676952503688226339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16549610bfe4458aa9389201d072bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-5769028731505164745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676952503688226339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c79d771cedb4794bf100ce60df5f764, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultGhostMode: 2
-  SupportedGhostModes: 3
-  OptimizationMode: 0
-  Importance: 1
-  prefabId: 5ea0f29dd0488074f900ae707b9fefc5
-  HasOwner: 1
-  SupportAutoCommandTarget: 1
-  TrackInterpolationDelay: 0
-  GhostGroup: 0
-  UsePreSerialization: 0
-  RollbackPredictedSpawnedGhostState: 0
-  RollbackPredictionOnStructuralChanges: 1

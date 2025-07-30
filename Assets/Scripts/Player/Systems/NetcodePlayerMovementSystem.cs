@@ -18,11 +18,9 @@ partial struct NetcodePlayerMovementSystem : ISystem
                 RefRO<NetcodePlayerInput>, 
                 RefRW<LocalTransform>>().WithAll<Simulate>())
         {
-            float moveSpeed = 10.0f;
-            float3 moveVector = new float3(
-                netcodePlayerInput.ValueRO.inputVector.x,
-                0,
-                netcodePlayerInput.ValueRO.inputVector.y);
+            float moveSpeed = netcodePlayerInput.ValueRO.playerSpeed;
+            float2 inputVector = netcodePlayerInput.ValueRO.inputVector;
+            float3 moveVector = new float3(inputVector.x, 0, inputVector.y);
 
             localTransform.ValueRW.Position += moveSpeed * SystemAPI.Time.DeltaTime * moveVector;
 

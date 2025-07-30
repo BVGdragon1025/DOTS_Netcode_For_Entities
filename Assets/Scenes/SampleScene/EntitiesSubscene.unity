@@ -257,8 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13163667be46af646849e594946256a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOnePrefab: {fileID: 4676952503688226339, guid: c406349883c402b49ab618e213d08323, type: 3}
-  playerTwoPrefab: {fileID: 4676952503688226339, guid: 5ea0f29dd0488074f900ae707b9fefc5, type: 3}
+  playerOnePrefab: {fileID: 1398529190282672225, guid: 8c74c2ed60b155846a3977e49fc1d79c, type: 3}
+  playerTwoPrefab: {fileID: 1398529190282672225, guid: 8c74c2ed60b155846a3977e49fc1d79c, type: 3}
   bulletPrefab: {fileID: 3097072109097911379, guid: f33d8e4a71a237448a2dd294dd754131, type: 3}
 --- !u!4 &1220868192
 Transform:

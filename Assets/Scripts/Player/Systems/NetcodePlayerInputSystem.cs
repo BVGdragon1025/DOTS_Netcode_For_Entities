@@ -15,7 +15,6 @@ partial struct NetcodePlayerInputSystem : ISystem
         
     }
 
-    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         foreach (
@@ -43,6 +42,15 @@ partial struct NetcodePlayerInputSystem : ISystem
             }
 
             netcodePlayerInput.ValueRW.inputVector = inputVector;
+
+            if (math.length(inputVector) > 0)
+            {
+                netcodePlayerInput.ValueRW.isRunning.Set();
+            }
+            else
+            {
+                netcodePlayerInput.ValueRW.isRunning = default;
+            }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {

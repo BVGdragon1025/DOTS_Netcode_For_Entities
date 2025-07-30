@@ -12,7 +12,6 @@ partial struct GoInGameServerSystem : ISystem
         state.RequireForUpdate<NetworkId>();
     }
 
-    //[BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntityCommandBuffer entityCommandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);

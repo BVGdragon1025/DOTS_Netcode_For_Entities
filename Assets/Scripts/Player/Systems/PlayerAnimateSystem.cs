@@ -2,7 +2,6 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Collections;
 using Unity.Transforms;
-using Unity.Mathematics;
 
 [UpdateInGroup(typeof(PresentationSystemGroup), OrderFirst = true)]
 partial struct PlayerAnimateSystem : ISystem
